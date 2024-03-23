@@ -1,6 +1,7 @@
 import React from 'react'
 import './Tourpackage.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({ id, name, description, image, price }) => {
 
@@ -39,7 +40,8 @@ const Card = ({ id, name, description, image, price }) => {
                     <i class="far fa-star"></i>
                 </div>
                 <div class="price">${price} <span> $120.00</span></div>
-                <button className='book-btn'>Book Now</button>
+                
+                <Link to={`/product/${id}`}><button onClick={window.scrollTo(0,0)} className='book-btn'>Book Now</button></Link>
             </div>
         </div>
 

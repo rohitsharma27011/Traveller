@@ -4,6 +4,7 @@ import Signup from './components/Signup/Signup';
 import Navbar from './components/Navbar/Navbar';
 import Bookings from './components/Bookings/Bookings';
 import Footer from './components/Footer/Footer';
+import Product from './Pages/Product';
 import './App.css';
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Signup />} />
+          <Route path='/product' element={<Product />}>
+            <Route path=':productId' element={<Product />} />
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>
