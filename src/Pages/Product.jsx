@@ -10,7 +10,7 @@ const Product = () => {
 
 
 
-    const {all_trips} = useContext(TravelContext);
+    // const {all_trips} = useContext(TravelContext);
     const {trips} = useContext(TravelContext);
     console.log(all_trips);
     
@@ -23,7 +23,7 @@ const Product = () => {
   return (
     <div>
         <h1>Test</h1>
-        <ProductDisplay  />
+        <ProductDisplay product={product} />
     </div>
   )
 }

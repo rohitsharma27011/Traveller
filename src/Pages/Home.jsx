@@ -20,13 +20,13 @@ const Home = () => {
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videoSources.length);
-    }, 5000); 
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videoSources.length);
+  //   }, 5000); 
 
-    return () => clearTimeout(timeout); // Clean up the timeout on unmount or before next effect run
-  }, [currentVideoIndex, videoSources.length]);
+  //   return () => clearTimeout(timeout); // Clean up the timeout on unmount or before next effect run
+  // }, [currentVideoIndex, videoSources.length]);
 
   return (
     <div>
